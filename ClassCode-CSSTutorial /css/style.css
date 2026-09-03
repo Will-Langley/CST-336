@@ -1,0 +1,27 @@
+/* #main-title{
+    /* color:blue;
+    text-decoration:underline;
+}
+
+#container{
+    background-color: darkblue;
+    width: 100%;
+    color: white;
+}
+
+.column{
+    width: 30%;
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+}
+
+#mid-section{
+    width: 80%;
+    margin: auto;
+}
+
+#cards{
+    display: flex;
+    justify-content: space-evenly;
+} */
