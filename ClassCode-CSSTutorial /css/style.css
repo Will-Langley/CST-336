@@ -1,5 +1,5 @@
-/* #main-title{
-    /* color:blue;
+#main-title{
+    color:blue;
     text-decoration:underline;
 }
 
@@ -24,4 +24,4 @@
 #cards{
     display: flex;
     justify-content: space-evenly;
-} */
+}

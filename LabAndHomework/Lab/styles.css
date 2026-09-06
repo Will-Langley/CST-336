@@ -1,0 +1,57 @@
+.text{
+    color: white;
+}
+
+#header{
+    background-color: #a49062;
+    width: 100%;
+    color: white;
+    font-size: max(30px);
+    text-align: center;
+    padding: 1px;
+    font-family: 'Pacifico', cursive;
+
+}
+
+#main{
+    background-color: darkblue;
+    padding: 1px;
+    width: 100%;
+    text-align: center;
+}
+
+#mainbody{
+    display: flex;
+    justify-content: space-evenly; 
+}
+
+#nav{
+    background-color: gold;
+    width: 100%;
+    font-size: max(20px);
+    color: black;
+    text-align: center;
+}
+
+#footer {
+    background-color: black;
+    padding: 1px;
+    width: 100%;
+    text-align: center;
+}
+
+#home{
+
+}
+
+#about{
+
+}
+
+#contact{
+
+}
+#Welcome{
+
+}
+
