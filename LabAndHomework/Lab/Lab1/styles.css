@@ -14,7 +14,7 @@
 }
 
 #main{
-    background-color: darkblue;
+    background-color: #00366A;
     padding: 1px;
     width: 100%;
     text-align: center;
@@ -26,7 +26,7 @@
 }
 
 #nav{
-    background-color: gold;
+    background-color: #353535;
     width: 100%;
     font-size: max(20px);
     color: black;
