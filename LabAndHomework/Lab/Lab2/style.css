@@ -1,0 +1,70 @@
+.text {
+    color: black;
+}
+
+.main {
+    background-color: cadetblue;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#guessInput {
+    display: block;
+    margin: 0 auto;
+}
+
+#guessButton{
+    text-align: center;
+}
+
+#guessMessage {
+    text-decoration: underline;
+    font-size: 35px;
+    text-align: center;
+}
+
+#TriesText {
+    text-decoration: underline;
+    font-size: 20px;
+    text-align: center;
+}
+
+#PrevText {
+    text-decoration: underline;
+    font-size: 20px;
+    text-align: center;
+}
+
+#WinsText {
+    text-decoration: underline;
+    font-size: 20px;
+    text-align: center;
+}
+
+#LoseText {
+    text-decoration: underline;
+    font-size: 20px;
+    text-align: center;
+}
+
+#numTries {
+    font-size: 20px;
+    text-align: center;
+}
+
+#prevGuessText {
+    font-size: 20px;
+    text-align: center;
+}
+
+#totalWinsText {
+    font-size: 20px;
+    text-align: center;
+}
+
+#totalLoseText {
+    font-size: 20px;
+    text-align: center;
+}
