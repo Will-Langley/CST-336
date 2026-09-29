@@ -5,56 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 3: Quiz</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
+    <main class = "quiz">
+        <h1>HTML and CSS Quiz</h1>
 
-    <h1>HTML and CSS Quiz</h1>
-    
-    1. What HTML element creates a dropdown menu? 
-    <br>
-    <label><input name="q1" type="radio" value="select"> Select </label>
-    <label><input name="q1" type="radio" value="dropdown"> Dropdown</label>
-    <label><input name="q1" type="radio" value="option"> Option</label>
-    <label><input name="q1" type="radio" value="menu"> Menu</label>
+        <div class="question">
+            <p>1. What HTML element creates a dropdown menu?</p><br>
+            <div id="q1Choices"></div>
+            <div id="q1Feedback" class="feedback"></div>
+        </div>
 
+        <div class="question">
+            <label for="q2">2. What CSS property changes the color of text?</label><br>
+            <input type="text" id="q2">
+            <div id="q2Feedback" class="feedback"></div>
+        </div>
 
-    <br>
+        <div class="question">
+            <label for="q3">3. Which HTML element creates a hyperlink?</label><br>
+            <select id="q3">
+                <option value="">-- Choose one --</option>
+                <option value="link">link</option>
+                <option value="a">a</option>
+                <option value="href">href</option>
+                <option value="nav">nav</option>
+            </select>
+            <div id="q3Feedback" class="feedback"></div>
+        </div>
 
-    
-    <br>
+        <div class="question">
+            <label for="q4">4. How many heading levels (h1, h2, ...) does HTML have?</label><br>
+            <input type="number" id="q4" min="1" max="10">
+            <div id="q4Feedback" class="feedback"></div>
+        </div>
 
-    2. What HTML element creates a dropdown menu?  <br>
-    <input type="text" id="q2">
-    <br>
-    <br>
+        <div class="question">
+            <p>5. Which of these create a dropdown menu or a small clickable circle? (Check all that apply)</p><br>
+            <label><input type="checkbox" id="q5Select"> Select</label>
+            <label><input type="checkbox" id="q5Dropdown"> Dropdown</label>
+            <label><input type="checkbox" id="q5Radio"> Radio</label>
+            <label><input type="checkbox" id="q5Menu"> Menu</label>
+            <div id="q5Feedback" class="feedback"></div>
+        </div>
 
-    3. What HTML element creates a dropdown menu?  <br>
-    <select id="q3">
-        <option value="option1">Select</option>
-        <option value="option2">Dropdown</option>
-        <option value="option3">Radio</option>
-        <option value="option3">Menu</option>
-    </select>
-    <br>
-    <br>
-    4. What HTML element creates a dropdown menu? (Number only)  <br>
-    <input type="number" id="q4"><br>
-    <p style="text-indent: 40px;">1. Select</p>
-    <p style="text-indent: 40px;">2. Radio</p>
-    <p style="text-indent: 40px;">3. Dropdown</p>
-    <p style="text-indent: 40px;">4. Menu</p>
+        <button id="submitBtn">Submit Quiz</button>
 
-    <br>
-
-    5. What HTML element creates a dropdown menu and a small clickable circle?  <br>
-    <input type="checkbox" name="q5" value="option1"> Select<br>
-    <input type="checkbox" name="q5" value="option2"> Dropdown<br>
-    <input type="checkbox" name="q5" value="option3"> Radio<br>
-    <input type="checkbox" name="q5" value="option4"> Menu<br>
-
-
-    <br>
-    <button>Submit Quiz</button>
+        <div id="results">
+            <h2 id="totalScore"></h2>
+            <p id="congrats"></p>
+            <p id="totalAttempts"></p>
+        </div>
+    </main>
 </body>
 </html>
