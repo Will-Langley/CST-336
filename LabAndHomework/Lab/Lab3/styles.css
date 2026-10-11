@@ -13,6 +13,11 @@ body {
     padding: 30px;
 }
 
+h1 {
+    text-align: center;
+    color: navy;
+    letter-spacing: 1px;
+}
 
 .question label {
     line-height: 1.8;
