@@ -1,0 +1,72 @@
+body {
+    background-color: white;
+    color: dimgray;
+    font-family: Arial, sans-serif;
+}
+
+header h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-layout{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.filters {
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+}
+
+.filters h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-title {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.error-msg {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.results {
+    color: gray;
+    font-style: italic;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.results-area {
+    flex: 1;
+    background-color: tan;
+}
+
+.result-card img {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    color: dimgray;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid gray;
+}

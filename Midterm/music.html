@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="music.js" defer></script>
+    <title>Midterm Project</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="music.html">CST336 Midterm Project</a>
+                <ul class="navbar-nav flex-row gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="rick.html">Rick and Morty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="music.html">Music</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <h1>Music Search</h1>
+    </header>
+
+    <main class="search-layout">
+        <section class="filters">
+            <h2>Filters</h2>
+
+            <div class="filter-group">
+                <label for="termInput" class="filter-title">Artist or Song</label>
+                <input type="text" id="termInput" placeholder="ex: Drake">
+            </div>
+
+            <div class="filter-group">
+                <label for="typeSelect" class="filter-title">Type</label>
+                <select id="typeSelect">
+                    <option value="">Any</option>
+                    <option value="song">Songs</option>
+                    <option value="album">Albums</option>
+                    <option value="musicVideo">Music Videos</option>
+                </select>
+            </div>
+
+            <button id="resetBtn">Reset Filters</button>
+        </section>
+
+        <section class="results-area">
+            <p id="resultsMessage" class="results-msg"></p>
+            <div id="results" class="results-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>William Langley</p>
+        <p>CST336-01</p>
+        <p>Data From iTunes Search API</p>
+    </footer>
+</body>
+</html>
