@@ -1,13 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1><%= name %></h1>
-    <img src="<%= image %>" />
-    
-</body>
-</html>
+<%- include('partials/head') %>
+<%- include('partials/nav') %>
+
+<main class="container my-4">
+   <div class="row">
+      <div class="col-md-6 text-center">
+         <img class="planet" src="<%= info.image %>" alt="<%= name %>">
+      </div>
+      <div class="col-md-6">
+         <h1><%= name %></h1>
+         <p><%= info.description %></p>
+         <ul class="list-unstyled">
+            <li>Distance from Sun: <%= info.distanceFromSun %></li>
+            <li>Year length: <%= info.yearLength %></li>
+            <li>One Earth day: <%= info.oneEarthDay %></li>
+            <li>Radius: <%= info.radius %> miles</li>
+            <li>Moons: <%= info.moons %></li>
+            <li><a href="<%= info.websiteLink %>" target="_blank">NASA page</a></li>
+         </ul>
+      </div>
+   </div>
+</main>
+
+<%- include('partials/footer') %>

@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planets website</title>
-</head>
-<body>
-    <p>Welcome to the planets!</p>
-    <a href="/planetInfo?planet=Mercury">Mercury</a>
-    <a href="/planetInfo?planet=Venus">Venus</a>
-    <a href="/planetInfo?planet=Earth">Earth</a>
-    <a href="/planetInfo?planet=Mars">Mars</a>
-    <a href="/planetInfo?planet=Jupiter">Jupiter</a>
-    <a href="/planetInfo?planet=Saturn">Saturn</a>
-    <a href="/planetInfo?planet=Uranus">Uranus</a>
-    <a href="/planetInfo?planet=Neptune">Neptune</a>
-</body>
-</html>
+<%- include('partials/head') %>
+<%- include('partials/nav') %>
+
+<main class="container my-4">
+   <h1 class="text-center">Welcome to the planets!</h1>
+   <% if (error) { %>
+   <p class="text-center"><%= error %></p>
+   <% } else { %>
+   <div class="row">
+      <% for (let i = 0; i < images.length; i++) { %>
+         <div class="col-6 col-md-3 mb-3">
+            <img class="photo" src="<%= images[i] %>" alt="Solar system photo <%= i + 1 %>">
+         </div>
+      <% } %>
+   </div>
+<% } %>
+</main>
+
+<%- include('partials/footer') %>
