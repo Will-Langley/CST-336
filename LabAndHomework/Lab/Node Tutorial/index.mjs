@@ -49,7 +49,7 @@ app.get('/planetInfo', (req, res) => {
    res.render('planet.ejs', { name: planet, info: planetData });
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
    console.log('server started');
 });
 
