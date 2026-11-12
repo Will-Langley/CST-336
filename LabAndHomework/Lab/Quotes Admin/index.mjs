@@ -10,17 +10,17 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended:true}));
 app.set('trust proxy', 1);
 app.use(session({
-    secret: 'quotes admin secret key',
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false
 }));
 
 //setting up database connection pool, replace values in red
 const pool = mysql.createPool({
-    host: "d13xat1hwxt21t45.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    user: "lru868rp8ryaeke3",
-    password: "mf9p2q7r3opq7lwg",
-    database: "vnujnm2vqpohwi0e",
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
     connectionLimit: 10,
     waitForConnections: true
 });
@@ -409,6 +409,6 @@ app.get("/dbTest", isAuthenticated, async(req, res) => {
     }
 });
 
-app.listen(3000, ()=>{
+app.listen(process.env.PORT || 3000, ()=>{
     console.log("Express server running")
 })
