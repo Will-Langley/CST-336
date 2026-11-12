@@ -1,0 +1,28 @@
+<%- include('partials/header', { title: 'Home' }) %>
+
+    <h1 class="mb-4">Admin Dashboard</h1>
+
+    <div class="row g-3">
+        <div class="col-md-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="h5 card-title">Quotes</h2>
+                    <p class="card-text text-muted">Add new quotes or edit and delete existing ones.</p>
+                    <a href="/newQuote" class="btn btn-primary">Add Quote</a>
+                    <a href="/quoteList" class="btn btn-primary">Manage Quotes</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="h5 card-title">Authors</h2>
+                    <p class="card-text text-muted">Add new authors or edit and delete existing ones.</p>
+                    <a href="/newAuthor" class="btn btn-primary">Add Author</a>
+                    <a href="/authorList" class="btn btn-primary">Manage Authors</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<%- include('partials/footer') %>

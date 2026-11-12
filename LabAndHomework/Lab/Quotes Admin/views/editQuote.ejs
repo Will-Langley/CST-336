@@ -1,0 +1,62 @@
+<%- include('partials/header', { title: 'Edit Quote' }) %>
+
+    <a href="/quoteList" class="btn btn-outline-secondary btn-sm mb-3">&larr; Back to Quotes</a>
+
+    <div class="card shadow-sm">
+        <div class="card-body p-4">
+            <h1 class="h3 mb-4">Edit Quote</h1>
+            <form action="/updateQuote" method="post">
+                <input type="hidden" name="quoteId" value="<%= formObject.quoteId %>">
+
+                <div class="mb-3">
+                    <label for="quoteInput" class="form-label">Quote</label>
+                    <input name="quote" id="quoteInput" value="<%= formObject.quote %>" class="form-control">
+                    <% if (formErrors.quote) { %>
+                        <div class="form-error text-danger small mt-1"><%= formErrors.quote %></div>
+                    <% } %>
+                </div>
+
+                <div class="mb-3">
+                    <label for="authorInput" class="form-label">Author</label>
+                    <select name="authorId" id="authorInput" class="form-select">
+                        <% for (let author of formData.authors) { %>
+                            <% if (author.authorId == formObject.authorId) { %>
+                                <option value="<%= author.authorId %>" selected><%= author.firstName %> <%= author.lastName %></option>
+                            <% } else { %>
+                                <option value="<%= author.authorId %>"><%= author.firstName %> <%= author.lastName %></option>
+                            <% } %>
+                        <% } %>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="categoryInput" class="form-label">Category</label>
+                    <select name="category" id="categoryInput" class="form-select">
+                        <% for (let row of formData.categories) { %>
+                            <% if (row.category == '') { continue; } %>
+                            <% if (row.category == formObject.category) { %>
+                                <option value="<%= row.category %>" selected><%= row.category %></option>
+                            <% } else { %>
+                                <option value="<%= row.category %>"><%= row.category %></option>
+                            <% } %>
+                        <% } %>
+                    </select>
+                    <% if (formErrors.category) { %>
+                        <div class="form-error text-danger small mt-1"><%= formErrors.category %></div>
+                    <% } %>
+                </div>
+
+                <div class="mb-3">
+                    <label for="likesInput" class="form-label">Likes</label>
+                    <input type="number" name="likes" id="likesInput" min="0" value="<%= formObject.likes ?? 0 %>" class="form-control">
+                    <% if (formErrors.likes) { %>
+                        <div class="form-error text-danger small mt-1"><%= formErrors.likes %></div>
+                    <% } %>
+                </div>
+
+                <button class="btn btn-primary">Update</button>
+            </form>
+        </div>
+    </div>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,77 @@
+<%- include('partials/header', { title: 'Add Author' }) %>
+
+    <a href="/" class="btn btn-outline-secondary btn-sm mb-3">&larr; Back</a>
+
+    <div class="card shadow-sm">
+        <div class="card-body p-4">
+            <h1 class="h3 mb-4">New Author</h1>
+            <form action="/insertAuthor" method="post">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstNameInput" class="form-label">First Name</label>
+                        <input name="firstName" id="firstNameInput" value="<%= formObject.firstName %>" class="form-control">
+                        <% if (formErrors.firstName) { %>
+                            <div class="form-error text-danger small mt-1"><%= formErrors.firstName %></div>
+                        <% } %>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastNameInput" class="form-label">Last Name</label>
+                        <input name="lastName" id="lastNameInput" value="<%= formObject.lastName %>" class="form-control">
+                        <% if (formErrors.lastName) { %>
+                            <div class="form-error text-danger small mt-1"><%= formErrors.lastName %></div>
+                        <% } %>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="dobInput" class="form-label">Date of Birth</label>
+                        <!-- type="date" gives a calendar picker and sends the date as YYYY-MM-DD -->
+                        <input type="date" name="dob" id="dobInput" value="<%= formObject.dob %>" class="form-control">
+                        <% if (formErrors.dob) { %>
+                            <div class="form-error text-danger small mt-1"><%= formErrors.dob %></div>
+                        <% } %>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="dodInput" class="form-label">Date of Death <span class="text-muted">(optional)</span></label>
+                        <input type="date" name="dod" id="dodInput" value="<%= formObject.dod %>" class="form-control">
+                        <% if (formErrors.dod) { %>
+                            <div class="form-error text-danger small mt-1"><%= formErrors.dod %></div>
+                        <% } %>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="genderInput" class="form-label">Gender</label>
+                        <select name="gender" id="genderInput" class="form-select">
+                            <option value="M" <%= formObject.gender == 'M' ? 'selected' : '' %>>Male</option>
+                            <option value="F" <%= formObject.gender == 'F' ? 'selected' : '' %>>Female</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="professionInput" class="form-label">Profession</label>
+                        <input name="profession" id="professionInput" value="<%= formObject.profession %>" class="form-control">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="countryInput" class="form-label">Country</label>
+                        <input name="country" id="countryInput" value="<%= formObject.country %>" class="form-control">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="portraitInput" class="form-label">Portrait URL</label>
+                    <input name="portrait" id="portraitInput" value="<%= formObject.portrait %>" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="biographyInput" class="form-label">Biography</label>
+                    <textarea name="biography" id="biographyInput" rows="4" class="form-control"><%= formObject.biography %></textarea>
+                </div>
+
+                <button class="btn btn-primary">Create</button>
+            </form>
+        </div>
+    </div>
+
+<%- include('partials/footer') %>
